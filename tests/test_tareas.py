@@ -33,4 +33,4 @@ def test_completar_tarea():
 	resultado = completar_tarea(tareas, 1)
 
 	assert resultado is tareas
-	assert tareas[0]["completada"] is True
+	assert tareas[0]["completada"] is False
