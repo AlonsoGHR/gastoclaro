@@ -1,22 +1,30 @@
-# Gestor de Tareas - Práctica 04
+# GastoClaro
 
-Aplicación de consola para agregar, listar y completar tareas.
+Aplicación web para registrar gastos personales, clasificarlos por categoría y consultar totales.
 
 ## Estructura
 
 ```text
-Practica04/
+gastoclaro/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
+├── perf/
+│   └── load-test.js
+├── public/
+│   ├── app.js
+│   ├── index.html
+│   └── styles.css
+├── src/
+│   ├── app.js
+│   ├── calculos.js
+│   └── server.js
 ├── tests/
-│   └── test_tareas.py
+│   ├── api.test.js
+│   └── calculos.test.js
 ├── .gitignore
-├── main.py
-├── pytest.ini
-├── README.md
-├── requirements.txt
-└── tareas.py
+├── package.json
+└── README.md
 ```
 
 ## Uso
@@ -24,23 +32,21 @@ Practica04/
 Instala las dependencias:
 
 ```bash
-pip install -r requirements.txt
+npm install
 ```
 
 Inicia el gestor:
 
 ```bash
-python main.py
+npm start
 ```
 
 Ejecuta las pruebas:
 
 ```bash
-pytest -v
+npm test
 ```
 
 ## Integración Continua
 
-Cada push a `main` ejecuta GitHub Actions: instala dependencias, verifica la sintaxis del código y corre las pruebas con pytest. El workflow está en `.github/workflows/ci.yml`.
-
-Si alguna prueba falla, el workflow se marca en rojo y bloquea la integración del cambio.
+Cada push a `main` ejecuta GitHub Actions: instala las dependencias con npm y corre las pruebas de Jest y Supertest. El workflow está en `.github/workflows/ci.yml`.

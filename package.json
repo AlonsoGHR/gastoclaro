@@ -1,0 +1,19 @@
+{
+  "name": "gastoclaro",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Sistema web de control de gastos personales",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  }
+}

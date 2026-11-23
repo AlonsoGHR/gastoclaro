@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GastoClaro</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main>
+      <h1>GastoClaro</h1>
+      <p id="total-header">Total gastado: $0.00</p>
+
+      <form id="gasto-form">
+        <input id="descripcion" name="descripcion" placeholder="Descripcion" required>
+        <input id="monto" name="monto" type="number" min="0.01" step="0.01" placeholder="Monto" required>
+        <input id="categoria" name="categoria" placeholder="Categoria" required>
+        <input id="fecha" name="fecha" type="date" required>
+        <button type="submit">Agregar gasto</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr><th>Descripcion</th><th>Monto</th><th>Categoria</th><th>Fecha</th><th></th></tr>
+        </thead>
+        <tbody id="gastos"></tbody>
+      </table>
+
+      <section>
+        <h2>Resumen</h2>
+        <p id="total">Total: $0.00</p>
+        <ul id="resumen-categorias"></ul>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
